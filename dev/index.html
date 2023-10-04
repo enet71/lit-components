@@ -6,7 +6,13 @@
     <title>&lt;my-element> Demo</title>
     <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
     <script src="../node_modules/lit/polyfill-support.js"></script>
-    <script type="module" src="../my-element.js"></script>
+    <script
+      type="module"
+      src="../dist/expansion-panel/expansion-panel.js"
+    ></script>
+    <script type="module" src="../dist/accordion/accordion.js"></script>
+    <script type="module" src="../dist/clock/clock.js"></script>
+    <script type="module" src="../dist/todo-list/todo-list.js"></script>
     <style>
       p {
         border: solid 1px blue;
@@ -15,8 +21,25 @@
     </style>
   </head>
   <body>
-    <my-element>
-      <p>This is child content</p>
-    </my-element>
+    <my-accordion>
+      <expansion-panel>
+        <div slot="header">Todo List</div>
+        <div slot="body">
+          <todo-list></todo-list>
+        </div>
+      </expansion-panel>
+      <expansion-panel>
+        <div slot="header">Panel 2</div>
+        <div slot="body">
+          <my-clock></my-clock>
+        </div>
+      </expansion-panel>
+      <expansion-panel>
+        <div slot="header">Panel 3</div>
+        <div slot="body">
+          <my-clock></my-clock>
+        </div>
+      </expansion-panel>
+    </my-accordion>
   </body>
 </html>
