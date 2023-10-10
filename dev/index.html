@@ -13,6 +13,8 @@
     <script type="module" src="../dist/accordion/accordion.js"></script>
     <script type="module" src="../dist/clock/clock.js"></script>
     <script type="module" src="../dist/todo-list/todo-list.js"></script>
+    <script type="module" src="../dist/button/button.js"></script>
+    <script type="module" src="../dist/input/input.js"></script>
     <style>
       p {
         border: solid 1px blue;
@@ -29,15 +31,15 @@
         </div>
       </expansion-panel>
       <expansion-panel>
-        <div slot="header">Panel 2</div>
+        <div slot="header">Clock</div>
         <div slot="body">
           <my-clock></my-clock>
         </div>
       </expansion-panel>
       <expansion-panel>
-        <div slot="header">Panel 3</div>
+        <div slot="header">Button</div>
         <div slot="body">
-          <my-clock></my-clock>
+          <my-button buttonLabel="My button"></my-button>
         </div>
       </expansion-panel>
     </my-accordion>

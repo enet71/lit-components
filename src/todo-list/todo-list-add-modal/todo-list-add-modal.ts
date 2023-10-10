@@ -17,10 +17,10 @@ export class TodoListAddModalElement extends LitElement {
     return html`<div class="modal__body">
       <div>Title</div>
       <div>
-        <input form="name" />
+        <my-input form="name" />
       </div>
-      <button @click="${this.close}">Close</button>
-      <button @click="${this.addItem}">Add Item</button>
+      <my-button buttonLabel="Close" @click="${this.close}"></my-button>
+      <my-button buttonLabel="Add Item" @click="${this.addItem}"></my-button>
     </div>`;
   }
 

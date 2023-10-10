@@ -17,7 +17,7 @@ export class TodoListElement extends LitElement {
   public override render(): TemplateResult {
     return html`
       ${this.itemsTemplate}
-      <button @click="${this.addItem}">Add Item</button>
+      <my-button buttonLabel="Add Item" @click="${this.addItem}"></my-button>
 
       ${this.addItemModalTemplate}
     `;
